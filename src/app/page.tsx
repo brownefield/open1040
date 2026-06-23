@@ -87,20 +87,20 @@ export default function Home() {
             </div>
           </a>
 
-          {/* Coming Soon */}
-          <div style={{background:'#0f1520',border:'1px solid rgba(255,255,255,0.07)',borderRadius:'16px',padding:'2rem',opacity:'0.7'}}>
+          {/* Tax Diagnostic */}
+          <Link href="/prepare" style={{background:'#0f1520',border:'1px solid rgba(255,255,255,0.07)',borderRadius:'16px',padding:'2rem',textDecoration:'none',color:'inherit',display:'block',transition:'all 0.2s',position:'relative'}}>
             <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',marginBottom:'1.25rem'}}>
               <div style={{width:'46px',height:'46px',borderRadius:'12px',background:'rgba(96,165,250,0.08)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'22px'}}>🔍</div>
-              <span style={{fontSize:'11px',fontWeight:'500',padding:'4px 10px',borderRadius:'100px',background:'rgba(100,116,139,0.15)',color:'#4a5568',border:'1px solid rgba(100,116,139,0.2)'}}>Coming Soon</span>
+              <span style={{fontSize:'11px',fontWeight:'500',padding:'4px 10px',borderRadius:'100px',background:'rgba(74,222,128,0.1)',color:'#4ade80',border:'1px solid rgba(74,222,128,0.2)'}}>Live</span>
             </div>
             <div style={{fontWeight:'700',fontSize:'1.2rem',letterSpacing:'-0.5px',marginBottom:'0.5rem'}}>Tax Diagnostic</div>
-            <div style={{fontSize:'14px',color:'#7a8898',lineHeight:'1.6',fontWeight:'300',marginBottom:'1.25rem'}}>Answer a few questions and know exactly which IRS forms you need before you sit down to file.</div>
+            <div style={{fontSize:'14px',color:'#7a8898',lineHeight:'1.6',fontWeight:'300',marginBottom:'1.25rem'}}>Answer a few questions, organize what you have, and walk into your CPA appointment with a structured summary instead of a shoebox.</div>
             <div style={{display:'flex',flexWrap:'wrap',gap:'6px'}}>
-              {['Form checker','Complexity score','CPA prep'].map(t=>(
+              {['Pre-file organizer','Document checklist','CPA-ready summary'].map(t=>(
                 <span key={t} style={{fontSize:'11px',color:'#4a5568',background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.07)',padding:'3px 10px',borderRadius:'100px'}}>{t}</span>
               ))}
             </div>
-          </div>
+          </Link>
 
         </div>
       </section>
@@ -143,7 +143,8 @@ export default function Home() {
           </div>
           <div style={{display:'flex',gap:'1.5rem'}}>
             <a href="https://github.com/brownefieldio/open1040" target="_blank" rel="noreferrer" style={{fontSize:'13px',color:'#334155',textDecoration:'none'}}>GitHub</a>
-            <a href="/open1040" style={{fontSize:'13px',color:'#334155',textDecoration:'none'}}>Open1040</a>
+            <Link href="/open1040" style={{fontSize:'13px',color:'#334155',textDecoration:'none'}}>Open1040</Link>
+            <Link href="/prepare" style={{fontSize:'13px',color:'#334155',textDecoration:'none'}}>Tax Diagnostic</Link>
             <a href="https://overtime.taxclarity.io" style={{fontSize:'13px',color:'#334155',textDecoration:'none'}}>OT Calculator</a>
           </div>
         </div>
