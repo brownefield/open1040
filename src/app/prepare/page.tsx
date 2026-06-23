@@ -855,7 +855,7 @@ export default function PreparePage() {
         <div style={{ maxWidth: '760px', margin: '0 auto', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
             <div style={{ width: '28px', height: '28px', background: 'linear-gradient(135deg,#c8973a,#e8b85a)', borderRadius: '7px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '12px', color: '#0a0e14' }}>TC</div>
-            <span style={{ fontWeight: 700, fontSize: '15px', color: '#e2e8f0' }}>Tax<span style={{ color: '#c8973a' }}>Clarity</span> <span style={{ color: '#475569', fontWeight: 400 }}>/ Prepare</span></span>
+            <span style={{ fontWeight: 700, fontSize: '15px', color: '#e2e8f0' }}>Tax<span style={{ color: '#c8973a' }}>Clarity</span> <span style={{ color: '#475569', fontWeight: 400 }}>/ Tax Diagnostic</span></span>
           </a>
           <div style={{ fontSize: '13px', color: '#475569' }}>Step {step + 1} of {STEPS.length}</div>
         </div>

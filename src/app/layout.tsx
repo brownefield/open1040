@@ -2,9 +2,12 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Open1040 — Free Simple Federal Tax Prep',
+  title: {
+    default: 'TaxClarity — Free Tax Tools',
+    template: '%s | TaxClarity',
+  },
   description:
-    'Free, open-source tax preparation assistant for simple U.S. federal returns. Single filers, W-2 income, standard deduction. Always free. Always transparent. A Brownefield Holdings project.',
+    'Free, open-source tax tools that actually work for you. No upsells, no account required, no data leaves your device. A Brownefield Holdings public service project.',
   robots: 'index, follow',
 };
 
