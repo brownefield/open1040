@@ -135,3 +135,20 @@
   }
 }
 .skip-link { position:absolute; top:-100px; left:1rem; z-index:50; background:#243b53; color:#fff; padding:0.5rem 1rem; border-radius:0 0 0.5rem 0.5rem; transition:top 0.15s; font-size:0.875rem; text-decoration:none; } .skip-link:focus { top:0; }
+
+/* ── Tax Readiness (/prepare) ── */
+@media (max-width: 640px) {
+  .tc-prepare [style*="grid-template-columns: 1fr 1fr"],
+  .tc-prepare [style*="grid-template-columns: 2fr 1fr"],
+  .tc-prepare [style*="grid-template-columns: 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+  .tc-prepare [style*="grid-template-columns: 1fr 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media print {
+  .no-print { display: none !important; }
+  .tc-prepare { background: #fff !important; }
+  .tc-prepare [style*="border: 2px solid"] { break-inside: avoid; }
+}
