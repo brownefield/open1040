@@ -30,7 +30,7 @@ const TOOLS: Tool[] = [
     tags: ['Document checklist', 'Missing-item gaps', 'CPA-ready summary'],
   },
   {
-    name: 'What changed for 2026',
+    name: 'What changed for 2026 taxes',
     question: 'Does any of it affect you?',
     body: 'Short, interactive explainers on this year’s changes — overtime, tips, senior and car-loan provisions — in plain English.',
     href: '#tools',
@@ -72,7 +72,14 @@ const PRINCIPLES = [
   ['Open source', 'MIT-licensed. Read every line on GitHub.'],
 ];
 
-const JOURNEY = ['Understand', 'Gather', 'Check', 'Prepare', 'Hand off', 'Track'];
+const JOURNEY: [string, string][] = [
+  ['Understand', 'Know which forms apply to you'],
+  ['Gather', 'Collect what you already have'],
+  ['Check', 'See what’s still missing'],
+  ['Prepare', 'Line up questions for your preparer'],
+  ['Hand off', 'Send a clean summary — no shoebox'],
+  ['Track', 'Keep your next due dates in view'],
+];
 
 function HexBadge() {
   return (
@@ -212,17 +219,15 @@ export default function Home() {
         <section className="border-y-2 border-tc-ink bg-tc-paper">
           <div className="mx-auto max-w-5xl px-5 py-6">
             <ol
-              className="flex flex-wrap items-center gap-x-3 gap-y-2"
+              className="grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3 lg:grid-cols-6"
               aria-label="How TaxClarity works"
             >
-              {JOURNEY.map((step, i) => (
-                <li key={step} className="flex items-center gap-3">
-                  <span className="tc-label text-tc-ink">{step}</span>
-                  {i < JOURNEY.length - 1 && (
-                    <span className="text-tc-line" aria-hidden="true">
-                      —
-                    </span>
-                  )}
+              {JOURNEY.map(([step, desc], i) => (
+                <li key={step} className="border-l-2 border-tc-honey pl-3">
+                  <span className="tc-label text-tc-ink">
+                    {i + 1}. {step}
+                  </span>
+                  <p className="mt-1 text-[13px] leading-snug text-tc-muted">{desc}</p>
                 </li>
               ))}
             </ol>
@@ -289,12 +294,22 @@ export default function Home() {
               </h2>
               <p className="mt-3 text-[15px] leading-relaxed text-tc-muted">
                 Send clients here before the appointment — they arrive organized, not with a
-                shoebox. You spend your time on judgment, not chasing documents. Pilot spots are
-                open for the 2027 season.
+                shoebox. You spend your time on judgment, not chasing documents. Free pilot spots
+                are open for the 2027 filing season (2026 tax year).
+              </p>
+              <p className="mt-3 text-sm text-tc-muted">
+                Email{' '}
+                <a
+                  href={CONTACT}
+                  className="font-semibold text-tc-ink underline underline-offset-4"
+                >
+                  hello@taxclarity.io
+                </a>{' '}
+                with your firm name and we’ll send your clients’ link.
               </p>
             </div>
             <a href={CONTACT} className="tc-pill-primary shrink-0">
-              Request early access
+              Join the pilot
             </a>
           </div>
         </section>
