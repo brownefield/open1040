@@ -30,6 +30,19 @@ module.exports = {
           800: '#22543d',
           900: '#1c4532',
         },
+        // TaxClarity × Japandi / Brownefield Woodworks palette
+        tc: {
+          cream: '#F4EEE3', // page background
+          paper: '#FBF8F1', // card surface
+          ink: '#2A241D', // text + card borders
+          muted: '#6B5F52', // secondary text
+          line: '#D9CFBF', // hairlines
+          honey: '#B07F35', // primary accent (TaxClarity gold, toned to oak)
+          honeysoft: '#F1E4CC',
+          sage: '#76866A', // accent bar — live / ready
+          clay: '#B4694A', // accent bar — attention
+          slate: '#5D6B78', // accent bar — info
+        },
         warm: {
           50: '#fffaf0',
           100: '#feebc8',

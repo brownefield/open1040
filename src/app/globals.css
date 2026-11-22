@@ -87,6 +87,33 @@
     @apply bg-warm-50 border border-warm-200 rounded-lg p-3 sm:p-4 text-sm text-navy-700;
   }
 
+  /* ── TaxClarity homepage (Japandi × Brownefield Woodworks) ── */
+  .tc-label {
+    @apply text-[11px] font-semibold uppercase tracking-[0.18em] text-tc-muted;
+  }
+  .tc-pill-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-tc-ink
+           bg-tc-honey px-6 py-3 text-[15px] font-semibold text-tc-paper
+           transition-colors duration-150 hover:bg-tc-ink
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-tc-honey focus-visible:ring-offset-2 focus-visible:ring-offset-tc-cream;
+  }
+  .tc-pill-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-tc-ink
+           bg-transparent px-6 py-3 text-[15px] font-semibold text-tc-ink
+           transition-colors duration-150 hover:bg-tc-paper
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-tc-honey focus-visible:ring-offset-2 focus-visible:ring-offset-tc-cream;
+  }
+  .tc-card {
+    @apply relative overflow-hidden rounded-3xl border-2 border-tc-ink bg-tc-paper;
+  }
+  .tc-bar {
+    @apply absolute inset-y-0 left-0 w-2;
+  }
+  .tc-status {
+    @apply inline-flex items-center rounded-full border border-tc-ink/30 px-2.5 py-0.5
+           text-[11px] font-semibold uppercase tracking-[0.12em];
+  }
+
   /* Screen reader only — visually hidden but accessible */
   .sr-only {
     @apply absolute w-px h-px p-0 -m-px overflow-hidden;

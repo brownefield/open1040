@@ -3,11 +3,11 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: {
-    default: 'TaxClarity — Free Tax Tools',
+    default: 'TaxClarity — Know Before You File',
     template: '%s | TaxClarity',
   },
   description:
-    'Free, open-source tax tools that actually work for you. No upsells, no account required, no data leaves your device. A Brownefield Holdings public service project.',
+    'Check what you have, what you’re missing, and what to do next — then file with software or a professional when you’re ready. Free readiness tools from Brownefield Holdings.',
   robots: 'index, follow',
 };
 
