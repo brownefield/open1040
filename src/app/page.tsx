@@ -61,8 +61,14 @@ const TOOLS: Tool[] = [
 
 const PRINCIPLES = [
   ['Free core tools', 'Readiness, calculators and Open1040 stay free.'],
-  ['No surprise paywalls', 'We charge only for optional services that organize, review, or move your situation forward.'],
-  ['Browser-first', 'Free tools are built to work in your browser, and we don’t save what you enter.'],
+  [
+    'No surprise paywalls',
+    'We charge only for optional services that organize, review, or move your situation forward.',
+  ],
+  [
+    'Browser-first',
+    'Free tools are built to work in your browser, and we don’t save what you enter.',
+  ],
   ['Open source', 'MIT-licensed. Read every line on GitHub.'],
 ];
 
@@ -108,7 +114,10 @@ function ToolCard({ tool }: { tool: Tool }) {
       <p className="mt-2 text-[15px] leading-relaxed text-tc-muted">{tool.body}</p>
       <div className="mt-5 flex flex-wrap gap-2">
         {tool.tags.map((t) => (
-          <span key={t} className="rounded-full border border-tc-line px-3 py-1 text-xs text-tc-muted">
+          <span
+            key={t}
+            className="rounded-full border border-tc-line px-3 py-1 text-xs text-tc-muted"
+          >
             {t}
           </span>
         ))}
@@ -145,7 +154,10 @@ export default function Home() {
             <span className="font-display text-lg font-semibold">TaxClarity</span>
           </Link>
           <nav className="flex items-center gap-5">
-            <a href="#preparers" className="hidden text-sm font-medium text-tc-muted hover:text-tc-ink sm:inline">
+            <a
+              href="#preparers"
+              className="hidden text-sm font-medium text-tc-muted hover:text-tc-ink sm:inline"
+            >
               For preparers
             </a>
             <Link href="/prepare" className="tc-pill-primary px-4 py-2 text-sm">
@@ -165,8 +177,8 @@ export default function Home() {
             you file.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-tc-muted">
-            Check what you have, what you’re missing, and what to do next — then file with software or a
-            professional when you’re ready.
+            Check what you have, what you’re missing, and what to do next — then file with software
+            or a professional when you’re ready.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <Link href="/prepare" className="tc-pill-primary">
@@ -175,12 +187,16 @@ export default function Home() {
             <Link href="/open1040" className="tc-pill-secondary">
               Prepare a Simple Return
             </Link>
-            <a href="#tools" className="px-2 text-sm font-medium text-tc-muted underline-offset-4 hover:underline">
+            <a
+              href="#tools"
+              className="px-2 text-sm font-medium text-tc-muted underline-offset-4 hover:underline"
+            >
               See free tools
             </a>
           </div>
           <p className="mt-5 max-w-xl text-sm text-tc-muted">
-            We charge only for optional services that organize, review, or help move your tax situation forward.
+            We charge only for optional services that organize, review, or help move your tax
+            situation forward.
           </p>
 
           {/* Seasonal note */}
@@ -195,11 +211,18 @@ export default function Home() {
         {/* JOURNEY */}
         <section className="border-y-2 border-tc-ink bg-tc-paper">
           <div className="mx-auto max-w-5xl px-5 py-6">
-            <ol className="flex flex-wrap items-center gap-x-3 gap-y-2" aria-label="How TaxClarity works">
+            <ol
+              className="flex flex-wrap items-center gap-x-3 gap-y-2"
+              aria-label="How TaxClarity works"
+            >
               {JOURNEY.map((step, i) => (
                 <li key={step} className="flex items-center gap-3">
                   <span className="tc-label text-tc-ink">{step}</span>
-                  {i < JOURNEY.length - 1 && <span className="text-tc-line" aria-hidden="true">—</span>}
+                  {i < JOURNEY.length - 1 && (
+                    <span className="text-tc-line" aria-hidden="true">
+                      —
+                    </span>
+                  )}
                 </li>
               ))}
             </ol>
@@ -209,7 +232,9 @@ export default function Home() {
         {/* TOOLS */}
         <section id="tools" className="mx-auto max-w-5xl scroll-mt-20 px-5 py-20">
           <p className="tc-label">Free tools</p>
-          <h2 className="mt-3 font-display text-4xl font-semibold tracking-tight">Start with a question.</h2>
+          <h2 className="mt-3 font-display text-4xl font-semibold tracking-tight">
+            Start with a question.
+          </h2>
           <p className="mt-3 max-w-lg text-[15px] leading-relaxed text-tc-muted">
             Each tool answers one thing well. All free, all in your browser.
           </p>
@@ -231,9 +256,9 @@ export default function Home() {
             </div>
             <div className="space-y-4 text-[15px] leading-relaxed text-tc-muted">
               <p>
-                What do I need? What am I missing? Is my situation simple, or not? TaxClarity answers those
-                questions first — so whoever files your return, software or a professional, starts with a clear
-                picture.
+                What do I need? What am I missing? Is my situation simple, or not? TaxClarity
+                answers those questions first — so whoever files your return, software or a
+                professional, starts with a clear picture.
               </p>
               <p className="tc-label pt-2">A Brownefield Holdings public service project</p>
             </div>
@@ -259,10 +284,13 @@ export default function Home() {
             <span className="tc-bar bg-tc-honey" aria-hidden="true" />
             <div className="max-w-lg">
               <p className="tc-label">For CPAs &amp; enrolled agents</p>
-              <h2 className="mt-3 font-display text-3xl font-semibold">Clients who arrive organized.</h2>
+              <h2 className="mt-3 font-display text-3xl font-semibold">
+                Clients who arrive organized.
+              </h2>
               <p className="mt-3 text-[15px] leading-relaxed text-tc-muted">
-                Send clients here before the appointment — they arrive organized, not with a shoebox. You spend
-                your time on judgment, not chasing documents. Pilot spots are open for the 2027 season.
+                Send clients here before the appointment — they arrive organized, not with a
+                shoebox. You spend your time on judgment, not chasing documents. Pilot spots are
+                open for the 2027 season.
               </p>
             </div>
             <a href={CONTACT} className="tc-pill-primary shrink-0">
@@ -274,9 +302,9 @@ export default function Home() {
         {/* COMPLIANCE */}
         <section className="mx-auto max-w-5xl px-5 pb-16">
           <div className="rounded-2xl border border-tc-line px-5 py-4 text-sm leading-relaxed text-tc-muted">
-            <strong className="text-tc-ink">TaxClarity prepares the taxpayer.</strong> Qualified software or
-            professionals prepare and file the return. TaxClarity is an organization and readiness tool — it does
-            not file returns or provide legal, accounting, or tax advice.
+            <strong className="text-tc-ink">TaxClarity prepares the taxpayer.</strong> Qualified
+            software or professionals prepare and file the return. TaxClarity is an organization and
+            readiness tool — it does not file returns or provide legal, accounting, or tax advice.
           </div>
         </section>
       </main>
@@ -285,14 +313,22 @@ export default function Home() {
       <footer className="border-t-2 border-tc-ink">
         <div className="mx-auto flex max-w-5xl flex-col gap-4 px-5 py-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-tc-muted">
-            <span className="font-display font-semibold text-tc-ink">TaxClarity</span> · A Brownefield Holdings
-            project · MIT License
+            <span className="font-display font-semibold text-tc-ink">TaxClarity</span> · A
+            Brownefield Holdings project · MIT License
           </p>
           <nav className="flex flex-wrap gap-5 text-sm text-tc-muted">
-            <Link href="/prepare" className="hover:text-tc-ink">Tax Readiness</Link>
-            <Link href="/open1040" className="hover:text-tc-ink">Open1040</Link>
-            <a href={OT_URL} className="hover:text-tc-ink">Overtime</a>
-            <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="hover:text-tc-ink">GitHub</a>
+            <Link href="/prepare" className="hover:text-tc-ink">
+              Tax Readiness
+            </Link>
+            <Link href="/open1040" className="hover:text-tc-ink">
+              Open1040
+            </Link>
+            <a href={OT_URL} className="hover:text-tc-ink">
+              Overtime
+            </a>
+            <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="hover:text-tc-ink">
+              GitHub
+            </a>
           </nav>
         </div>
       </footer>
